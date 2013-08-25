@@ -15,9 +15,9 @@ ruas = ruas.uniq
 
 puts ruas.count
 #puts ruas.join(',')
+puts ruas
 
-
-puts FileUtils.compare_file('temp.json','temp2.json')
+#puts FileUtils.compare_file('temp.json','temp2.json')
 
 for buss in onibus do
     #puts buss['itinerario']['volta'].last

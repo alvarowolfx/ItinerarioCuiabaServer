@@ -38,19 +38,29 @@ class BussItineraryScraper
         voltas = []
         return { ida: [], volta: [] }  if(@doc.at('#ida') == nil || @doc.at('#volta') == nil)   
         
-        content = @doc.at('#ida').content
-        content = content.gsub(/\r/,'')
-        content.split(/\n/).each do |path|
-            idas.push path.strip
-        end
-        content = @doc.at('#volta').content
-        content = content.gsub(/\r/,'')
-        content.split(/\n/).each do |path|
-            voltas.push path.strip
-        end
+        idas = parseItinerary('#ida')
+        voltas = parseItinerary('#volta')
         resposta = { ida: idas, volta: voltas}
         #puts resposta
         resposta
+   end
+   
+   def parseItinerary(id)
+     paths = []
+     content = @doc.at(id).content
+     content = content.gsub(/\r/,'')
+     content.split(/\n/).each do |path|
+       next if path.upcase == path
+       path = path.gsub(/(EM OPERA.*)/,'')  
+       path = path.gsub(/(Obs\..*)/,'')  
+       path = path.gsub(/(OBSERVA.*)/,'')  
+       path = path.gsub(/(desde.*)/,'')  
+       path = path.gsub(/(a partir.*)/,'')  
+       path = path.gsub(/\A\(|\)\Z/,'') if path.start_with?('(')
+       path = path.strip
+       paths.push path if !path.empty?
+     end
+     paths          
    end
 end
 
@@ -62,6 +72,6 @@ for buss in onibus do
     buss[:itinerario] = scraper.crawl
 end
 
-File.open("temp2.json","w") do |f|
+File.open("temp.json","w") do |f|
   f.write(onibus.to_json)
 end
