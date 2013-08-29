@@ -1,0 +1,10 @@
+{"ts":1377639827483,"silentsave":true,"restoring":false,"patch":[[]],"length":0}
+{"contributors":[],"silentsave":false,"ts":1377639862719,"patch":[[{"diffs":[[1,"<!DOCTYPE html>\n<html>\n    <head>\n        <title>Teste </title>\n    </head>\n    <body>\n        <div id='map_canvas'> </div>\n    </body>\n</html>"]],"start1":0,"start2":0,"length1":0,"length2":143}]],"length":143,"saved":false}
+{"ts":1377639900106,"patch":[[{"diffs":[[0,"   <body"],[1," onload='initialize()'"],[0,">\n      "]],"start1":77,"start2":77,"length1":16,"length2":38}]],"length":165,"saved":false}
+{"ts":1377639932581,"patch":[[{"diffs":[[0,"/title>\n"],[1,"        <script src=\"map.js\" type=\"text/javascript\"></script>\n"],[0,"    </he"]],"start1":56,"start2":56,"length1":16,"length2":78}]],"length":227,"saved":false}
+{"ts":1377640009368,"patch":[[{"diffs":[[0,"pt src=\""],[1,"./"],[0,"map.js\" "]],"start1":77,"start2":77,"length1":16,"length2":18}]],"length":229,"saved":false}
+{"ts":1377640047466,"patch":[[{"diffs":[[0,"t src=\"."],[1,"."],[0,"/map.js\""]],"start1":78,"start2":78,"length1":16,"length2":17}]],"length":230,"saved":false}
+{"ts":1377640064130,"patch":[[{"diffs":[[0,"=\"../map"],[1,"s"],[0,".js\" typ"]],"start1":83,"start2":83,"length1":16,"length2":17}]],"length":231,"saved":false}
+{"ts":1377640066018,"patch":[[{"diffs":[[0,"t src=\"."],[-1,"."],[0,"/maps.js"]],"start1":78,"start2":78,"length1":17,"length2":16}]],"length":230,"saved":false}
+{"ts":1377640076527,"patch":[[{"diffs":[[0,"rc=\""],[-1,"./"],[0,"maps"]],"start1":81,"start2":81,"length1":10,"length2":8}]],"length":228,"saved":false}
+{"ts":1377640253688,"patch":[[{"diffs":[[0,"/title>\n"],[1,"        <script type=\"text/javascript\"\n      src=\"http://maps.googleapis.com/maps/api/js?sensor=false\">\n    </script>\n"],[0,"        "]],"start1":56,"start2":56,"length1":16,"length2":134}]],"length":346,"saved":false}

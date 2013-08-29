@@ -2,10 +2,10 @@ source 'https://rubygems.org'
 
 gem 'sinatra'
 gem 'thin'
-gem 'capistrano'
+#gem 'capistrano'
 
 gem 'json'
 gem 'plist'
 
 gem 'nokogiri'
-gem 'wombat'
+#gem 'wombat'
