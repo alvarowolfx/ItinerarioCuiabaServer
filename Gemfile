@@ -5,6 +5,7 @@ gem 'thin'
 gem 'capistrano'
 
 gem 'json'
+gem 'plist'
 
 gem 'nokogiri'
 gem 'wombat'

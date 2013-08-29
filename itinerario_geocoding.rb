@@ -1,9 +1,13 @@
 require 'json'
+require 'plist'
 require 'fileutils'
 
 onibus = {}
 File.open("temp.json","r") do |f|
   onibus = JSON.load(f)
+end
+File.open("temp.plist","w") do |f|
+  f.write(onibus.to_plist)
 end
 ruas = []
 for buss in onibus do
